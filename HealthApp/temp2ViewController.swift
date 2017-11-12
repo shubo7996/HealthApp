@@ -21,8 +21,9 @@ class temp2ViewController: UIViewController {
       
         
         print (IntPassed)
-        self.loadingFromFirebase(i: Double(IntPassed))
-        myLabel.text = String(IntPassed)
+        
+        var Final_result = BMI(i: IntPassed)
+        myLabel.text = Final_result
 
         // Do any additional setup after loading the view.
     }
@@ -34,21 +35,16 @@ class temp2ViewController: UIViewController {
     
     @IBOutlet weak var myLabel: UILabel!
     
-   func loadingFromFirebase(i: Double) {
-    /*
- Database.database().reference.child("User").child((Auth.auth.currentUser?.uid)!).observeSingleEvent(of: .value, with {(snapshot) in
-    
-    if !snapshot.exists() {return}
-    
-    let dictionary = snapshot.value as! NSDictionary
-    
-    let BMI = (dictionary["BMI"]as! Double)
-    print(BMI)
-    })*/
-    
-    
-    
+    func BMI(i: Int) -> String {
+        if Double(i) < 18.5 {
+            return "You are underweight"
+        } else if Double(i) > 18.5 && Double(i) < 25 {
+            return "You are normalweight"
+        } else if Double(i) > 25 && Double(i) < 30 {
+            return "You are overweight"
+        } else { return "You are obese" }
     }
+        
     
     /*
     // MARK: - Navigation

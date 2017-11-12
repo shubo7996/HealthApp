@@ -412,8 +412,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfe-HY-Ovz">
-                                <rect key="frame" x="29" y="224" width="271" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfe-HY-Ovz">
+                                <rect key="frame" x="29" y="224" width="317" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -424,9 +424,6 @@
                                     <constraint firstAttribute="height" constant="30" id="wZc-o5-ThA"/>
                                 </constraints>
                                 <state key="normal" title="OK!"/>
-                                <connections>
-                                    <segue destination="0sG-h6-v8H" kind="show" id="4Bu-AO-qEt"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -446,7 +443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L3v-S3-40K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2752.8000000000002" y="-1676.311844077961"/>
+            <point key="canvasLocation" x="2311" y="-1666"/>
         </scene>
         <!--Log in -->
         <scene sceneID="P19-mJ-ohA">
@@ -600,7 +597,7 @@
         <image name="user_male2-128.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Bu-AO-qEt"/>
+        <segue reference="zvt-Cj-xn0"/>
         <segue reference="iUO-yz-9sn"/>
     </inferredMetricsTieBreakers>
 </document>

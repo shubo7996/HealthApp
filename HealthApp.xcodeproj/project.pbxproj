@@ -25,6 +25,7 @@
 		969A57451FAC53BA0041A1F2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969A57441FAC53BA0041A1F2 /* User.swift */; };
 		969A574D1FAC55B90041A1F2 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969A574C1FAC55B80041A1F2 /* SignUpTableViewController.swift */; };
 		969A574E1FAC56820041A1F2 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969A57461FAC54140041A1F2 /* TempViewController.swift */; };
+		96B75B421FE75DE900A16D23 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B75B411FE75DE900A16D23 /* Key.swift */; };
 		96F5D9A91FE460F80072332A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5D9A81FE460F80072332A /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		969A57441FAC53BA0041A1F2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		969A57461FAC54140041A1F2 /* TempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
 		969A574C1FAC55B80041A1F2 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+		96B75B411FE75DE900A16D23 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		96F5D9A81FE460F80072332A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				969A574C1FAC55B80041A1F2 /* SignUpTableViewController.swift */,
 				96F5D9A81FE460F80072332A /* ProfileViewController.swift */,
 				969A57441FAC53BA0041A1F2 /* User.swift */,
+				96B75B411FE75DE900A16D23 /* Key.swift */,
 				968837E91F7FE4FD00BDF11F /* SignInTableViewController.swift */,
 				965FFEB81F7BE68C009E146C /* Main.storyboard */,
 				965FFEBB1F7BE68C009E146C /* Assets.xcassets */,
@@ -232,6 +235,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-HealthApp/Pods-HealthApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -239,6 +243,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -271,6 +276,7 @@
 			files = (
 				965FFEB71F7BE68C009E146C /* ViewController.swift in Sources */,
 				969A574D1FAC55B90041A1F2 /* SignUpTableViewController.swift in Sources */,
+				96B75B421FE75DE900A16D23 /* Key.swift in Sources */,
 				969A574E1FAC56820041A1F2 /* TempViewController.swift in Sources */,
 				969A57451FAC53BA0041A1F2 /* User.swift in Sources */,
 				968837EA1F7FE4FD00BDF11F /* SignInTableViewController.swift in Sources */,

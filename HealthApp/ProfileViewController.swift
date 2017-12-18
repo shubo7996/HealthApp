@@ -10,46 +10,79 @@ import UIKit
 import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
+import SwiftKeychainWrapper
 
 class ProfileViewController: UITableViewController {
 
     @IBOutlet weak var ProfilePicview: UIImageView!
     
+    
     var ControlsArray : [String] = []
-    //let cellIdentifier = "cellIdentifier"
+    
+    
+    @IBOutlet weak var tableview: UITableView!
     
     override func viewDidLoad() {
     super.viewDidLoad()
         loggedinuser()
         
         //ControlsArray = ["Edit Profile", "Settings", "Terms and Conditions"]
-        //tableView.dataSource = self as! UITableViewDataSource
-        //tableView.delegate = self as! UITableViewDelegate
+        tableview.dataSource = self
+        tableview.delegate = self
+        tableview.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
-        ControlsArray.append("Edit Profile")
-        ControlsArray.append("Settings")
-        ControlsArray.append("Terms and Condition")
+
     }
+    
+  /*  override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: key_uid){
+            performSegue(withIdentifier: "goToLogin", sender: nil)
+        }
+    } */
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ControlsArray.count
+        //return ControlsArray.count
+        return 3
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        if indexPath.section == 0 {
-        let CA = ControlsArray[indexPath.row]
-        cell.textLabel?.text = CA
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        //let CA = ControlsArray[indexPath.row]
+        cell.textLabel?.text = "why you no working?"
         return cell
     }
         
 
-    @IBAction func SignOut(_ sender: Any) {
+ /*   @IBAction func SignOut(_ sender: Any) {
+      
+        let keychainResult = KeychainWrapper.standard.removeObject(forKey: key_uid)
+        
+        try! Auth.auth().signOut()
+        performSegue(withIdentifier: "goToLogin", sender: self)
+        
+        /*
+        UserDefaults.standard.removeObject(forKey: "usersigned")
+        UserDefaults.standard.synchronize()
+        
+        let signUp = self.storyboard?.instantiateViewController(withIdentifier: "signUpVC")
+        let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.window?.rootViewController = signUp
+        
+        delegate.rememberLogin()
+ */
+    }
+    */
+    
+    @IBAction func logout(_ sender: Any) {
+        let keychainResult = KeychainWrapper.standard.removeObject(forKey: key_uid)
+        
+        try! Auth.auth().signOut()
+        performSegue(withIdentifier: "goToLogin", sender: nil)
     }
     
 

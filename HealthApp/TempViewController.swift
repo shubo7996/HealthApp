@@ -11,6 +11,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
+import SwiftKeychainWrapper
 
 var handle:DatabaseHandle?
 
@@ -115,7 +116,13 @@ class TempViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             
     
     @IBAction func Logout(_ sender: Any ) {
+        
+        let keychainResult = KeychainWrapper.standard.removeObject(forKey: key_uid)
+        try! Auth.auth().signOut()
+        performSegue(withIdentifier: "logout", sender: nil)
      
+       /*
+        
         UserDefaults.standard.removeObject(forKey: "usersigned")
         UserDefaults.standard.synchronize()
         
@@ -124,6 +131,8 @@ class TempViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         delegate.window?.rootViewController = signUp
         
         delegate.rememberLogin()
+         
+         */
         
         
         

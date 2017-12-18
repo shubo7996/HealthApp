@@ -10,10 +10,19 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import FirebaseStorage
+import SwiftKeychainWrapper
 
 var ref: DatabaseReference?
 
 class SignUpTableViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: key_uid){
+            performSegue(withIdentifier: "signup", sender: nil)
+        }
+    }
+    
+    
 
     
     @IBOutlet weak var ImageView: UIImageView!
@@ -96,11 +105,20 @@ class SignUpTableViewController: UITableViewController, UINavigationControllerDe
                         
                         }
                     
-                    UserDefaults.standard.set(user!.email, forKey: "usersigned")
+                    KeychainWrapper.standard.set((user?.uid)!, forKey: key_uid)
+                    self.performSegue(withIdentifier: "signup", sender: nil)
+                    
+                    
+                    
+                    
+                    
+                    
+                   /* UserDefaults.standard.set(user!.email, forKey: "usersigned")
                     UserDefaults.standard.synchronize()
                     
                     let delegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
                     delegate.rememberLogin()
+ */
                 
                     }
                 else
